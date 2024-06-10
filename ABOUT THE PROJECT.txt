@@ -1,0 +1,11 @@
+"The Mango Corner Sale and Expense Tracker System" is a simple system where you can input your sales and expenses on selected dates. You can also edit, update, delete, and view the data (sales or expenses) for specific dates. Moreover, it saves the data into a PDF so that it can be printed and used in report generation.
+
+The system users are limited to the admin only or those who know the admin's credentials. The following are the admin credentials for logging in:
+
+Username: admin
+Password: admin
+---------------------
+Project Developers:
+
+Ong, Jeovanie
+Valdez, Tyron
