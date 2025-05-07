@@ -1,0 +1,1178 @@
+
+/* Menu */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading style */
+.heading {
+    background-color: #FFE03C;
+    padding: 5px 0 0 0; /* Adjust top and bottom padding */
+    display: flex; /* Add flex display to align items */
+    align-items: center; /* Center items vertically */
+    z-index: 2;
+}
+
+/* Menu Icon */
+/* Adjustments to the menu icon position and size */
+.menu-icon {
+    cursor: pointer;
+    margin-right: 15px; /* Add margin to separate the menu icon from the heading */
+    margin-left: 15px; /* Add a little space to the left */
+    line-height: 45px; /* Adjust line height to center vertically */
+}
+
+
+.heading h1 {
+    margin: 0;
+    line-height: 50px; /* Adjust line height to center vertically */
+}
+
+.logo img {
+    width: 80px; /* Adjust the width of the logo */
+}
+.logo span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #252525;
+    margin-top: 10px;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+.menu-icon {
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 15px;
+    line-height: 45px;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1); /* Add scaling effect on hover */
+    transition: color 0.2s ease, transform 0.2s ease; /* Add smooth transition */
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #FDFD96;
+    transition: left 0.3s ease;
+    z-index: 3;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+}
+.menu li {
+    padding: 10px;
+    color: #252525;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu li:hover {
+    background-color: #FFE03C;
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+.menu li a {
+    display: block;
+    padding-left: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+/* Icon style */
+.menu li i {
+    margin-right: 10px; /* Add margin to separate the icon from the text */
+}
+
+
+/* Dashboard Design */
+.container {
+    max-width: 1500px;
+    width: 90%;
+    margin: 60px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    position: relative; /* Added position relative */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+flex: 1;
+margin: 30px 10px; /* Add margin top and bottom */
+display: flex;
+flex-direction: column;
+position: relative; /* Ensure canvas stays within container */
+overflow: hidden; /* Add overflow hidden to hide any content that overflows */
+}
+
+.chart-container canvas {
+flex: 1;
+width: 100%; /* Ensure canvas takes full width */
+height: 100%; /* Ensure canvas takes full height */
+}
+
+.datetime {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    color: #666;
+    padding: 5px;
+}
+
+/* Updated style for branch */
+.page {
+    position: absolute;
+    top: 15px; /* Adjusted top position */
+    left: 20px; /* Adjust as needed */
+    font-size: 22px; /* Bigger font size */
+    font-weight: bold; /* Bold font */
+    color: #333;
+    padding: 5px;
+}
+
+.button-container {
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 21%;
+    margin-bottom: 20px; /* Add margin bottom here */
+}
+
+.button-container button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 150px; /* Set the width for both buttons */
+}
+
+/* Expenses Page */
+
+        /* New styles for the container */
+        .expenses-container {
+            padding: 20px; /* Add padding to the container */
+            width: 80%; /* Adjust width */
+            border-radius: 10px; /* Add border radius for soft edges */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+            background-color: white; /* White background */
+            margin: 20px auto; /* Center the container horizontally */
+        }
+
+        /* Table styles */
+        .expenses-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed; /* Fix table layout */
+        }
+
+        .expenses-table th,
+        .expenses-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            word-wrap: break-word; /* Wrap long words */
+            overflow-wrap: break-word; /* For better browser compatibility */
+        }
+
+        .expenses-table th {
+            background-color: #f2f2f2;
+        }
+
+        .expenses-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .action-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-expense-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .save-button {
+            background-color: white; /* Set background color to white */
+            color: #333; /* Set text color */
+            border: 1px solid #ccc; /* Add light gray outline */
+            font-weight: bold;
+        }
+        /* Edit and delete button style */
+        .edit-btn, .delete-btn {
+            padding: 1px 4px; /* Smaller padding */
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .edit-btn i {
+            font-size: 17px; /* Smaller icon size */
+        }
+        .delete-btn i {
+            font-size: 20px; /* Smaller icon size */
+        }
+
+        .edit-btn {
+            background-color: transparent;
+            color: #252525;;
+        }
+
+        .delete-btn {
+            background-color: transparent;
+            color: #f44336;
+        }
+        /* Hover effect for Edit button */
+        .edit-btn:hover {
+            background-color: transparent; /* Darker background color on hover */
+            transform: scale(1.05); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+
+        /* Hover effect for Delete button */
+        .delete-btn:hover {
+            background-color: transparent; /* Darker background color on hover */
+            transform: scale(1.07); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+
+        .form-container {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5); /* Semi-transparent black background */
+            backdrop-filter: blur(1px); /* Apply blur effect to the background */
+        }
+
+        .expense-form {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #f9f9f9;
+            width: 80%;
+            max-width: 400px;
+            z-index: 99999;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* Form input styles */
+        .expense-form input[type="text"],
+        .expense-form input[type="number"],
+        .expense-form select,
+        .expense-form input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Form button styles */
+        .expense-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Close button styles */
+        .close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            color: transparent;
+            background-color: transparent;
+            color: #333;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .close:hover {
+            background-color: red;
+            color: #fff;
+            transform: scale(1.005); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+        /* Title text styles */
+        .title-text {
+            text-align: left; /* Align text to the left */
+            margin-bottom: 15px;
+            position: relative;
+            margin-left: 0; /* Ensure there is no unwanted margin on the left */
+            margin-right: 0; /* Ensure there is no unwanted margin on the right */
+            z-index: 0;
+        }
+
+        .title-text h2 {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 10px;
+            color: #333;
+            font-size: 22px;
+        }
+
+        .title-line {
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        /* Styles for the date and time container */
+        .date-time-container {
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: right;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+
+        #current-date, #current-time {
+            font-size: 14px;
+            color: #666;
+        }
+
+
+        /* Clearfix for form container */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+        /* Modal dialog styles */
+        #delete-confirm-modal {
+            display: none;
+        }
+
+        #delete-confirm-modal .expense-form {
+            width: auto;
+        }
+
+        #delete-confirm-modal p {
+            margin-bottom: 20px;
+        }
+
+        #delete-confirm-modal .expense-form-button {
+            margin-right: 10px;
+        }
+        /* Date input box style */
+        .filter-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #filter-date {
+            background-color: #f2f2f2; /* Lighter background color */
+            border: none; /* Remove default border */
+            border-bottom: 1px solid #ccc; /* Add a bottom border */
+            padding: 8px; /* Add padding */
+            width: 200px; /* Set width */
+            color: #333; /* Text color */
+            border-radius: 4px;
+        }
+
+        #filter-date::placeholder {
+            color: #999; /* Placeholder text color */
+        }
+
+        #submit-filter {
+            background-color: #4CAF50; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Padding */
+            border: none; /* Remove border */
+            border-radius: 4px; /* Add border radius */
+            cursor: pointer; /* Add pointer cursor */
+            margin-left: 5px; /* Add margin to separate from the date input */
+        }
+
+        /* Hover effect */
+        #submit-filter:hover {
+            background-color: #45a049; /* Darker background color on hover */
+            transform: scale(1.02); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+        /* Hover effect for Add Expense button */
+        .add-expense-button:hover {
+            background-color: #45a049; /* Darker background color on hover */
+            transform: scale(1.02); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+
+        /* Hover effect for Print button */
+        .save-button:hover {
+            background-color: #f2f2f2; /* Light gray background color on hover */
+            transform: scale(1.02); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+
+
+        /* CSS for additional spacing */
+        .expense-action-button {
+            margin-right: 8px; /* Add space between the buttons */
+        }
+        /* Add these styles at the end of your CSS */
+
+        /* Button inside the expense form */
+        .expense-form button#expense-submit-button,
+        .expense-form button#update-expense-button,
+        .expense-form button#delete-expense-button
+         {
+            background-color: #FFE03C; /* Set background color */
+            color: #252525; /* Set font color */
+            font-weight: bold;
+        }
+
+        /* Hover effect for add expense button */
+        .expense-form button#expense-submit-button:hover {
+            background-color: #FFD600; /* Darker background color on hover */
+            transform: scale(1.02); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+
+        /* Hover effect for update expense button */
+        .expense-form button#update-expense-button:hover {
+            background-color: #FFD600; /* Darker background color on hover */
+            transform: scale(1.02); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+
+        /* Hover effect for delete expense button */
+        .expense-form button#delete-expense-button:hover {
+            background-color: #FFD600; /* Darker background color on hover */
+            transform: scale(1.02); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+
+
+
+        /* CSS for cancel buttons */
+        #add-cancel-button,
+        #update-cancel-button, #delete-cancel-button {
+            background-color: white; /* Set background color to white */
+            color: #333; /* Set text color */
+            border: 1px solid #ccc; /* Add light gray outline */
+            margin-right: 8px; /* Add space between the buttons */
+            font-weight: bold;
+        }
+
+        /* Hover effect */
+        #add-cancel-button:hover {
+            background-color: #f2f2f2; /* Light gray background color on hover */
+            transform: scale(1.02); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+        #update-cancel-button:hover {
+            background-color: #f2f2f2; /* Light gray background color on hover */
+            transform: scale(1.02); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+        #delete-cancel-button:hover {
+            background-color: #f2f2f2; /* Light gray background color on hover */
+            transform: scale(1.02); /* Zoom effect */
+            transition: transform 0.2s ease; /* Add smooth transition */
+        }
+            
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content {
+            background-color:  #FFE03C; /* Match this color with your submit button's background color */
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px; /* Soft edges */
+            width: 300px; /* Smaller width */
+            height: 15px; /* Smaller height */
+            text-align: center;
+            color: white; /* Text color for better contrast */
+        }
+
+        .modal-content p {
+            margin: 0;
+            color: #252525;
+        }
+
+/* Sales Page */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading style */
+.heading {
+    background-color: #FFE03C;
+    padding: 5px 0 0 0; /* Adjust top and bottom padding */
+    display: flex; /* Add flex display to align items */
+    align-items: center; /* Center items vertically */
+    z-index: 2;
+}
+
+/* Menu Icon */
+/* Adjustments to the menu icon position and size */
+.menu-icon {
+    cursor: pointer;
+    margin-right: 15px; /* Add margin to separate the menu icon from the heading */
+    margin-left: 15px; /* Add a little space to the left */
+    line-height: 45px; /* Adjust line height to center vertically */
+}
+
+
+.heading h1 {
+    margin: 0;
+    line-height: 50px; /* Adjust line height to center vertically */
+}
+
+.logo img {
+    width: 80px; /* Adjust the width of the logo */
+}
+.logo span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #252525;
+    margin-top: 10px;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+.menu-icon {
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 15px;
+    line-height: 45px;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1); /* Add scaling effect on hover */
+    transition: color 0.2s ease, transform 0.2s ease; /* Add smooth transition */
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #FDFD96;
+    transition: left 0.3s ease;
+    z-index: 3;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+}
+.menu li {
+    padding: 10px;
+    color: #252525;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu li:hover {
+    background-color: #FFE03C;
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+.menu li a {
+    display: block;
+    padding-left: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+/* Icon style */
+.menu li i {
+    margin-right: 10px; /* Add margin to separate the icon from the text */
+}
+
+/* New styles for the container */
+.sales-container {
+    padding: 20px; /* Add padding to the container */
+    width: 80%; /* Adjust width */
+    border-radius: 10px; /* Add border radius for soft edges */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    background-color: white; /* White background */
+    margin: 20px auto; /* Center the container horizontally */
+}
+
+/* Table styles */
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Fix table layout */
+}
+
+.sales-table th,
+.sales-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word; /* Wrap long words */
+    overflow-wrap: break-word; /* For better browser compatibility */
+}
+
+.sales-table th {
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.sales-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.action-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-sale-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.save-button {
+    background-color: white; /* Set background color to white */
+    color: #333; /* Set text color */
+    border: 1px solid #ccc; /* Add light gray outline */
+    font-weight: bold;
+}
+/* Edit and delete button style */
+.edit-btn, .delete-btn {
+    padding: 1px 4px; /* Smaller padding */
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.edit-btn i {
+    font-size: 17px; /* Smaller icon size */
+}
+.delete-btn i {
+    font-size: 20px; /* Smaller icon size */
+}
+
+.edit-btn {
+    background-color: transparent;
+    color: #252525;;
+}
+
+.delete-btn {
+    background-color: transparent;
+    color: #f44336;
+}
+/* Hover effect for Edit button */
+.edit-btn:hover {
+    background-color: transparent; /* Darker background color on hover */
+    transform: scale(1.05); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+
+/* Hover effect for Delete button */
+.delete-btn:hover {
+    background-color: transparent; /* Darker background color on hover */
+    transform: scale(1.07); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+
+.form-container {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent black background */
+    backdrop-filter: blur(1px); /* Apply blur effect to the background */
+}
+
+.sale-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+    width: 80%;
+    max-width: 400px;
+    z-index: 99999;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Form input styles */
+.sale-form input[type="text"],
+.sale-form input[type="number"],
+.sale-form select,
+.sale-form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Form button styles */
+.sale-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Close button styles */
+.close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: transparent;
+    background-color: transparent;
+    color: #333;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.close:hover {
+    background-color: red;
+    color: #fff;
+    transform: scale(1.005); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+/* Title text styles */
+.title-text {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 15px;
+    position: relative;
+    margin-left: 0; /* Ensure there is no unwanted margin on the left */
+    margin-right: 0; /* Ensure there is no unwanted margin on the right */
+    z-index: 0;
+}
+
+.title-text h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    padding-bottom: 10px;
+    color: #333;
+}
+.title-line {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+/* Styles for the date and time container */
+.date-time-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#current-date, #current-time {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* Clearfix for form container */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* Modal dialog styles */
+#delete-confirm-modal {
+    display: none;
+}
+
+#delete-confirm-modal .expense-form {
+    width: auto;
+}
+
+#delete-confirm-modal p {
+    margin-bottom: 20px;
+}
+
+#delete-confirm-modal .expense-form-button {
+    margin-right: 10px;
+}
+/* Date input box style */
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+}
+
+#filter-date {
+    background-color: #f2f2f2; /* Lighter background color */
+    border: none; /* Remove default border */
+    border-bottom: 1px solid #ccc; /* Add a bottom border */
+    padding: 8px; /* Add padding */
+    width: 200px; /* Set width */
+    color: #333; /* Text color */
+    border-radius: 4px;
+}
+
+#filter-date::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+#submit-filter {
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add border radius */
+    cursor: pointer; /* Add pointer cursor */
+    margin-left: 5px; /* Add margin to separate from the date input */
+}
+
+/* Hover effect */
+#submit-filter:hover {
+    background-color: #45a049; /* Darker background color on hover */
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+/* Hover effect for Add Expense button */
+.add-sale-button:hover {
+    background-color: #45a049; /* Darker background color on hover */
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+
+/* Hover effect for Print button */
+.save-button:hover {
+    background-color: #f2f2f2; /* Light gray background color on hover */
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+
+
+/* CSS for additional spacing */
+.sale-action-button {
+    margin-right: 8px; /* Add space between the buttons */
+}
+/* Add these styles at the end of your CSS */
+
+/* Button inside the expense form */
+.sale-form button#sale-submit-button,
+.sale-form button#update-sale-button,
+.sale-form button#delete-sale-button
+ {
+    background-color: #FFE03C; /* Set background color */
+    color: #252525; /* Set font color */
+    font-weight: bold;
+}
+
+/* Hover effect for add expense button */
+.sale-form button#sale-submit-button:hover {
+    background-color: #FFD600; /* Darker background color on hover */
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+
+/* Hover effect for update expense button */
+.sale-form button#update-sale-button:hover {
+    background-color: #FFD600; /* Darker background color on hover */
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+
+/* Hover effect for delete expense button */
+.sale-form button#delete-sale-button:hover {
+    background-color: #FFD600; /* Darker background color on hover */
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+
+
+
+/* CSS for cancel buttons */
+#add-cancel-button,
+#update-cancel-button, #delete-cancel-button {
+    background-color: white; /* Set background color to white */
+    color: #333; /* Set text color */
+    border: 1px solid #ccc; /* Add light gray outline */
+    margin-right: 8px; /* Add space between the buttons */
+    font-weight: bold;
+}
+
+/* Hover effect */
+#add-cancel-button:hover {
+    background-color: #f2f2f2; /* Light gray background color on hover */
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+#update-cancel-button:hover {
+    background-color: #f2f2f2; /* Light gray background color on hover */
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+#delete-cancel-button:hover {
+    background-color: #f2f2f2; /* Light gray background color on hover */
+    transform: scale(1.02); /* Zoom effect */
+    transition: transform 0.2s ease; /* Add smooth transition */
+}
+    
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+    background-color:  #FFE03C; /* Match this color with your submit button's background color */
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px; /* Soft edges */
+    width: 300px; /* Smaller width */
+    height: 15px; /* Smaller height */
+    text-align: center;
+    color: white; /* Text color for better contrast */
+}
+
+.modal-content p {
+    margin: 0;
+    color: #252525;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+/* Dashboard */
+    .container {
+        flex-direction: column; /* Stack charts vertically on mobile */
+        width: 80%;
+    }
+    .chart-container {
+        margin: 20px 0; /* Add margin between charts on mobile */
+        width: 100%; /* Set the width to 100% for full-width display on mobile */
+    }
+
+            /* Updated style for branch */
+    .branch {
+        left: 14px; /* Adjust as needed */
+    }
+
+/* Expenses */
+
+.expenses-table th,
+.expenses-table td {
+    font-size: 12px; /* Adjust font size for smaller screens */
+}
+
+#filter-date {
+width: 120px;
+height: 15px;
+}
+
+/* Adjust height and width for the view expenses button */
+#submit-filter {
+    padding: 8px 10px;
+}
+
+/* Adjust height and width for the add expense button */
+#add-expense-button {
+    padding: 8px 12px;
+}
+
+/* Adjust height and width for the save to PDF button */
+#save-button {
+    padding: 8px 12px;
+}
+
+    /* Adjust width and height for edit and delete buttons */
+.edit-btn,
+.delete-btn {
+    padding: 2px 4px; /* Smaller padding */
+}
+
+.edit-btn i {
+    font-size: 12px; /* Smaller icon size */
+}
+.delete-btn i {
+    font-size: 15px; /* Smaller icon size */
+}
+/* Styles for the date and time container */
+.date-time-container {
+    margin-right: 10px;
+}
+#current-date, #current-time {
+    font-size: 14px;
+}
+.button-text {
+display: none;
+}
+
+.add-expense-button, .save-button {
+    padding: 8px; /* Adjust padding if necessary */
+}
+
+/* Optionally adjust icon size */
+.add-expense-button i, .save-button i {
+    font-size: 16px; /* Adjust font size if necessary */
+}
+
+/* Sales */
+
+.sales-table th,
+.sales-table td {
+    font-size: 12px; /* Adjust font size for smaller screens */
+}
+
+#filter-date {
+width: 120px;
+height: 15px;
+}
+
+/* Adjust height and width for the view expenses button */
+#submit-filter {
+    padding: 8px 10px;
+}
+
+/* Adjust height and width for the add expense button */
+#add-expense-button {
+    padding: 8px 12px;
+}
+
+/* Adjust height and width for the save to PDF button */
+#save-button {
+    padding: 8px 12px;
+}
+
+    /* Adjust width and height for edit and delete buttons */
+.edit-btn,
+.delete-btn {
+    padding: 2px 4px; /* Smaller padding */
+}
+
+.edit-btn i {
+    font-size: 12px; /* Smaller icon size */
+}
+.delete-btn i {
+    font-size: 15px; /* Smaller icon size */
+}
+/* Styles for the date and time container */
+.date-time-container {
+    margin-right: 10px;
+}
+#current-date, #current-time {
+    font-size: 14px;
+}
+.button-text {
+display: none;
+}
+
+.add-sale-button, .save-button {
+    padding: 8px; /* Adjust padding if necessary */
+}
+
+/* Optionally adjust icon size */
+.add-sale-button i, .save-button i {
+    font-size: 16px; /* Adjust font size if necessary */
+}
+
+}
+
