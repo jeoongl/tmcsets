@@ -2,7 +2,7 @@
 
 The **Sales and Expense Tracker System** is a simple and efficient tool designed to help users manage their sales and expenses. It provides a user-friendly interface for tracking income and expenditures, enabling better financial management. With this system, users can easily log, view, and analyze sales and expense data over time.
 
-## Features
+## 🚀 Features
 
 - **Sales Tracking**: Allows users to record sales transactions with details such as amount, date, and category.
 - **Expense Tracking**: Lets users record expenses, categorize them, and track overall spending.
